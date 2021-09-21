@@ -34,13 +34,13 @@ const opts = {
 }
 
 const handleCLick = (movie)=>{
-    console.log(movie?.id)
+    // console.log(movie?.id)
     if (trailerUrl){
         setTrailerUrl('')
     }else{
         movieTrailer(movie.name || ' ' )
         .then((url)=>{
-            console.log(url)
+            // console.log(url)
             const urlparams = new URLSearchParams(new URL(url).search)
             setTrailerUrl(urlparams.get('v'))
         })
